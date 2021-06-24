@@ -1,9 +1,16 @@
+var cnv;
 var poseNet;
 var video;
 var poses = [];
 
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
 function setup() {
-  let canvas = createCanvas(640, 480);
+  cnv = createCanvas(640, 480);
 
   //use webcam video
   video = createCapture(VIDEO);
