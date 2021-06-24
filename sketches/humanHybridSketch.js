@@ -1,4 +1,5 @@
 //Declare variables:
+var cnv;
 let video;
 let poseNet;
 let poses = [];
@@ -52,10 +53,18 @@ function preload() {
   torsoImage = loadImage('assets/hybrid/torso.png')
 }
 
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
 //setup environment for posenet
 
 function setup() {
-  createCanvas(640, 480);
+  cnv = createCanvas(640, 480);
+  centerCanvas();
+  cnv.style('display', 'block');
   video = createCapture(VIDEO);
   //video.size(width, height);
   video.hide()
@@ -154,5 +163,8 @@ function poseImages() {
     let rightAnkle = pose.rightAnkle;
     image(rightAnkleImage, rightAnkle.x, rightAnkle.y, 90, 90);
   }
-
+   function windowResized(){
+     centerCanvas();
+     resizeCanvas(640, 480);
+   }
 }

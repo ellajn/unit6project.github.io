@@ -1,12 +1,21 @@
 //Spots, bruises, blemishes without video capture
 
 //Declare global variabels
+var cnv;
 var poseNet;
 var video;
 var poses = [];
 
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
 function setup() {
-  createCanvas(640, 480);
+  cnv = createCanvas(640, 480);
+  centerCanvas();
+  cnv.style('display', 'block');
   //use webcam video
   video = createCapture(VIDEO);
   video.hide();
@@ -67,5 +76,9 @@ function circle()  {
         line((keypoint.position.x - 10), (keypoint.position.y - 10), (keypoint.position.y - (random(5))), (keypoint.position.x + (random(2))))
       }  
     }
+  }
+  function windowResized(){
+    centerCanvas();
+    resizeCanvas(640, 480);
   }
 }
