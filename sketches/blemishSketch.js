@@ -11,6 +11,7 @@ function centerCanvas(){
 
 function setup() {
   cnv = createCanvas(640, 480);
+  centerCanvas();
 
   //use webcam video
   video = createCapture(VIDEO);
@@ -69,5 +70,9 @@ function circle()  {
   ellipse(keypoint.position.x, keypoint.position.y, 0, 0);
       }  
     }
+  }
+  function windowResized(){
+    centerCanvas();
+    resizeCanvas(640, 480);
   }
 }
