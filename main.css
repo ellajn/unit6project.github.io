@@ -41,6 +41,8 @@ p{
     margin-top: -240px; /*set to a negative number 1/2 of your height*/
     margin-left: -320px; /*set to a negative number 1/2 of your width*/
     position:fixed;
+    justify-content: center; 
+    align-items: center;ß
 }  
 
 .sketchPages{
