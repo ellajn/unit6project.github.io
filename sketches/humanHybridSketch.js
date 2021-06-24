@@ -65,6 +65,7 @@ function setup() {
   cnv = createCanvas(640, 480);
   centerCanvas();
   cnv.style('display', 'block');
+  
   video = createCapture(VIDEO);
   //video.size(width, height);
   video.hide()
