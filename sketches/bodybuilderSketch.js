@@ -109,7 +109,7 @@ function poseImages() {
     image(rightHipImage, rightHip.x, rightHip.y, 90, 90);
     
     let torso = pose.torso;
-    image(torsoImage, (leftShoulder.x + rightShoulder.x)/2, (leftShoulder.y + rightShoulder.y)/1.4, 170, 170);
+    image(torsoImage, (leftShoulder.x + rightShoulder.x)/2, (leftShoulder.y + rightShoulder.y)/1.5, 170, 170);
     
     let leftWrist = pose.leftWrist;
     image(leftWristImage, leftWrist.x, leftWrist.y, 90, 90);
