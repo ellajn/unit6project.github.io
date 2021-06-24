@@ -12,6 +12,7 @@ function centerCanvas(){
 function setup() {
   cnv = createCanvas(640, 480);
   centerCanvas();
+  cnv.style('display', 'block');
 
   //use webcam video
   video = createCapture(VIDEO);
