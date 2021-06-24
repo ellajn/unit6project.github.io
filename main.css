@@ -33,14 +33,7 @@ p{
     height: auto;
     position: fixed;
 }
-
-.sketchPages{
-    text-align: center;
-    font-size: 80px;
-    margin-top: -2px;
-}
-
-  .sketchCnv{
+.sketchCnv{
     top: 50%;
     left: 50%;
     /* width:30em;
@@ -49,3 +42,10 @@ p{
     margin-left: -320px; /*set to a negative number 1/2 of your width*/
     position:fixed;
 }  
+
+.sketchPages{
+    text-align: center;
+    font-size: 80px;
+    margin-top: -2px;
+}
+
